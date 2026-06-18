@@ -318,58 +318,82 @@
             </form>
         </div>
     </section>
-
-    <!-- FOOTER -->
+    
+    <!-- 3-COLUMN FOOTER -->
     <footer class="bg-slate-950 text-slate-400 text-sm">
-        <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-10">
-            <div class="flex flex-col md:flex-row justify-between gap-y-10">
+        <div class="max-w-screen-2xl mx-auto px-8 pt-12 pb-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+                
+                <!-- LEFT: Logos -->
+                <div>
+                    <div class="text-xs text-slate-400 mb-4 tracking-wider">PART OF INFINITY SHIELD FIRE GROUP</div>
+                    
+                    <div class="flex flex-col gap-y-5">
+                        
+                        <!-- Consultancy -->
+                        <a href="https://iinfinitydev.github.io/infinityshieldconsultancy/" class="flex items-center gap-x-3 group">
+                            <img src="assets/logos/consultancy-logo-white.png" 
+                                alt="Infinity Shield Fire Safety Consultancy" 
+                                class="h-9 w-auto group-hover:opacity-80 transition-opacity">
+                            <span class="text-sm text-white group-hover:text-[#C9A227] transition-colors">
+                                Infinity Shield Fire Safety Consultancy LLC
+                            </span>
+                        </a>
 
-                <div class="flex items-center gap-x-5">
-                    <img src="assets/logos/technical-logo-white.png"
-                         alt="Infinity Shield Technical Services LLC"
-                         class="h-14 w-auto flex-shrink-0">
+                        <!-- Technical Services -->
+                        <a href="https://iinfinitydev.github.io/infinityshieldtechnical/" class="flex items-center gap-x-3 group">
+                            <img src="assets/logos/technical-logo-white.png" 
+                                alt="Infinity Shield Technical Services" 
+                                class="h-9 w-auto group-hover:opacity-80 transition-opacity">
+                            <span class="text-sm text-white group-hover:text-[#C9A227] transition-colors">
+                                Infinity Shield Technical Services LLC
+                            </span>
+                        </a>
 
-                    <div>
-                        <div class="text-white text-lg font-semibold tracking-tight">Infinity Shield Technical Services LLC</div>
-                        <div class="text-sm text-slate-400 mt-0.5">Part of Infinity Shield Fire Group</div>
+                        <!-- UK -->
+                        <a href="https://www.infinityfireprevention.com/" target="_blank" rel="noopener noreferrer" 
+                        class="flex items-center gap-x-3 group">
+                            <img src="assets/logos/uk-logo-white.png" 
+                                alt="Infinity Fire Prevention UK" 
+                                class="h-9 w-auto group-hover:opacity-80 transition-opacity">
+                            <span class="text-sm text-white group-hover:text-[#C9A227] transition-colors">
+                                Infinity Fire Prevention UK
+                            </span>
+                        </a>
+
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 text-xs">
-                    <div>
-                        <div class="font-medium text-white mb-3 tracking-wider">COMPANY</div>
-                        <div class="space-y-1.5">
-                            <div>About Us</div>
-                            <div>Our Team</div>
-                            <div>UK Standards</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-medium text-white mb-3 tracking-wider">SERVICES</div>
-                        <div class="space-y-1.5">
-                            <div>Installation</div>
-                            <div>Maintenance</div>
-                            <div>Compliance Tracking</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-medium text-white mb-3 tracking-wider">CONTACT</div>
-                        <div class="space-y-1.5">
-                            <div>info@infinityshield.ae</div>
-                            <div>+971 XX XXX XXXX</div>
-                            <div>Dubai, United Arab Emirates</div>
-                        </div>
+                <!-- CENTRE: Services (Clickable) -->
+                <div>
+                    <div class="font-medium text-white mb-3 tracking-wider text-xs">SERVICES</div>
+                    <div class="space-y-1.5 text-sm">
+                        <a href="#services" class="hover:text-white block">Fire Stopping</a>
+                        <a href="#services" class="hover:text-white block">Cavity Barriers &amp; Compartmentation</a>
+                        <a href="#services" class="hover:text-white block">Fire Doors Installation &amp; Maintenance</a>
+                        <a href="#services" class="hover:text-white block">Steel Fire Protection</a>
+                        <a href="#services" class="hover:text-white block">Digital Compliance Tracking</a>
                     </div>
                 </div>
+
+                <!-- RIGHT: Contact (Clickable) -->
+                <div>
+                    <div class="font-medium text-white mb-3 tracking-wider text-xs">CONTACT</div>
+                    <div class="space-y-1.5 text-sm">
+                        <a href="mailto:info@infinityshieldtechnical.ae" class="hover:text-white block">info@infinityshieldtechnical.ae</a>
+                        <a href="tel:+971XXXXXXXXX" class="hover:text-white block">+971 XX XXX XXXX</a>
+                        <div>Dubai, United Arab Emirates</div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="border-t border-white/10 mt-16 pt-8 text-xs flex flex-col md:flex-row justify-between items-center">
-                <div>© 2026 Infinity Shield Technical Services LLC. All rights reserved.</div>
-                <div class="flex gap-x-6">
-                    <div>Privacy</div>
-                    <div>Terms</div>
-                </div>
+            <!-- Copyright (Centered) -->
+            <div class="mt-10 pt-6 border-t border-white/10 text-center text-xs text-slate-500">
+                © 2026 Infinity Shield Technical Services LLC. All rights reserved.
             </div>
+
         </div>
     </footer>
 
