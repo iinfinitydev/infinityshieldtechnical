@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Shield Technical Services LLC | UAE</title>
+    <meta name="description" content="Specialists in Installation of Passive Fire Protection & Fire Doors. 20 years of UK experience delivering high-quality workmanship across the UAE.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+        .nav-scrolled {
+            background-color: rgba(15, 23, 42, 0.95);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+        }
+        .service-card, .activity-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover, .activity-card:hover { transform: translateY(-6px); }
+        .gold-accent { color: #C9A227; }
+        .btn-gold { background-color: #C9A227; color: #0F172A; }
+        .btn-gold:hover { background-color: #B8971F; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- NAV -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-x-3">
+                <img src="assets/logos/technical-logo.png"
+                     alt="Infinity Shield Technical Services LLC"
+                     class="h-14 w-auto">
+            </div>
+
+            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="#services" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+                <a href="#approach" class="nav-link text-slate-600 hover:text-slate-900">Our Approach</a>
+                <a href="#activities" class="nav-link text-slate-600 hover:text-slate-900">Activities</a>
+                <a href="#why-us" class="nav-link text-slate-600 hover:text-slate-900">Why Us</a>
+                <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <a href="#contact"
+                   class="hidden md:inline-flex items-center px-6 py-3 text-sm font-semibold border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-2xl transition-colors">
+                    Get a Quote
+                </a>
+
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu"
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-8 py-6">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#services" class="py-1 text-slate-600">Services</a>
+                <a href="#approach" class="py-1 text-slate-600">Our Approach</a>
+                <a href="#activities" class="py-1 text-slate-600">Activities</a>
+                <a href="#why-us" class="py-1 text-slate-600">Why Us</a>
+                <a href="#contact" class="py-1 text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('assets/images/hero-background.jpg')]">
+            <div class="absolute inset-0 bg-slate-950/75"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/30 to-transparent"></div>
+        </div>
+
+        <div class="relative max-w-screen-2xl mx-auto px-8 pt-16 pb-12 text-white z-10">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
+                    <span class="text-sm font-medium tracking-wider">DUBAI • ABU DHABI • UAE</span>
+                </div>
+
+                <h1 class="text-6xl md:text-7xl leading-[1.05] font-semibold tracking-tighter mb-6">
+                    Precision installation.<br>
+                    Trusted delivery.<br>
+                    UK standards.
+                </h1>
+
+                <p class="max-w-xl text-xl text-slate-200 mb-10">
+                    Specialists in the installation of passive fire protection and fire doors. Backed by 20 years of UK experience, we deliver high-quality workmanship with complete compliance and transparency.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                            class="btn-gold px-9 py-4 font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">
+                        Get a Quote
+                    </button>
+                    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })"
+                            class="px-9 py-4 border border-white/70 hover:bg-white/10 font-semibold rounded-3xl text-lg transition-all">
+                        Explore Our Services
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="bg-white border-b">
+        <div class="max-w-screen-2xl mx-auto px-8 py-6">
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 text-sm">
+                <div class="flex items-center gap-x-3">
+                    <i class="fa-solid fa-check-circle text-emerald-500 text-xl"></i>
+                    <span class="font-medium">20 Years UK Experience</span>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <i class="fa-solid fa-check-circle text-emerald-500 text-xl"></i>
+                    <span class="font-medium">Skilled Technicians &amp; Certified Materials</span>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <i class="fa-solid fa-check-circle text-emerald-500 text-xl"></i>
+                    <span class="font-medium">Digital Compliance Tracking</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHO WE ARE -->
+    <section class="section-padding max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">WHO WE ARE</div>
+            <h2 class="text-5xl tracking-tighter font-semibold leading-none mb-6">Specialists in Passive Fire Protection Installation</h2>
+
+            <div class="prose prose-lg text-slate-600 max-w-2xl space-y-5">
+                <p>Infinity Shield Technical Services LLC is the dedicated installation arm of the Infinity Shield group, delivering high-quality passive fire protection, fire stopping, and fire door installation across residential, commercial, and industrial projects.</p>
+
+                <p>Backed by 20 years of industry experience from the United Kingdom, we combine skilled technicians, certified materials, and precise workmanship to ensure every installation meets the highest safety and compliance standards.</p>
+
+                <p class="font-medium text-slate-700 italic">“Trusted installers of passive fire solutions that protect lives and property.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES -->
+    <section id="services" class="section-padding bg-white border-y">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="max-w-2xl mb-12">
+                <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">WHAT WE DELIVER</div>
+                <h2 class="text-5xl tracking-tighter font-semibold">Core Service Lines</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Fire Stopping</h3>
+                    <p class="text-slate-600">Professional installation of fire stopping systems to maintain compartmentation integrity.</p>
+                </div>
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Cavity Barriers</h3>
+                    <p class="text-slate-600">Correct installation of cavity barriers in line with design specifications and regulations.</p>
+                </div>
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Compartmentation</h3>
+                    <p class="text-slate-600">Expert installation and verification of fire compartmentation systems.</p>
+                </div>
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Fire Doors Installation &amp; Maintenance</h3>
+                    <p class="text-slate-600">Supply, installation, and ongoing maintenance of fire doors to the highest standards.</p>
+                </div>
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Steel Fire Protection</h3>
+                    <p class="text-slate-600">Application of intumescent coatings and fire protection systems for structural steel.</p>
+                </div>
+                <div class="service-card bg-slate-50 border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Digital Compliance Tracking</h3>
+                    <p class="text-slate-600">Value-added service providing transparent digital records of all installations and certifications.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-sm text-slate-500 italic">Our USP: Compliance with transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section id="approach" class="section-padding max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">OUR METHOD</div>
+            <h2 class="text-5xl tracking-tighter font-semibold">Precision. Quality. Accountability.</h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 text-center">
+                <div class="text-[#C9A227] text-3xl mb-4"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h4 class="font-semibold text-lg mb-2">1. Review &amp; Plan</h4>
+                <p class="text-sm text-slate-600">We review drawings, specifications, and site conditions to ensure correct installation methodology.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 text-center">
+                <div class="text-[#C9A227] text-3xl mb-4"><i class="fa-solid fa-tools"></i></div>
+                <h4 class="font-semibold text-lg mb-2">2. Install with Precision</h4>
+                <p class="text-sm text-slate-600">Our skilled technicians install systems using certified materials and strict quality control.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 text-center">
+                <div class="text-[#C9A227] text-3xl mb-4"><i class="fa-solid fa-file-alt"></i></div>
+                <h4 class="font-semibold text-lg mb-2">3. Document &amp; Hand Over</h4>
+                <p class="text-sm text-slate-600">We provide full documentation and digital compliance records for complete transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT ACTIVITIES -->
+    <section id="activities" class="section-padding bg-white border-y">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+                <div>
+                    <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">WHAT'S NEW</div>
+                    <h2 class="text-5xl tracking-tighter font-semibold">Recent Activities &amp; Insights</h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="activity-card bg-slate-50 border border-slate-200 rounded-3xl p-7">
+                    <div class="text-xs text-[#C9A227] font-semibold tracking-wider mb-3">HERITAGE &amp; DELIVERY</div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-4">20 Years of UK Craftsmanship</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Our teams are trained and mentored to the high standards developed by Infinity Fire Prevention over two decades in the United Kingdom, ensuring consistent quality and attention to detail on every project.</p>
+                </div>
+
+                <div class="activity-card bg-slate-50 border border-slate-200 rounded-3xl p-7">
+                    <div class="text-xs text-[#C9A227] font-semibold tracking-wider mb-3">JANUARY 2026</div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Intersec 2026 – Dubai</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Our technical team joined the group exhibition at Intersec 2026, demonstrating installation techniques and discussing real-world challenges with consultants and contractors across the region.</p>
+                </div>
+
+                <div class="activity-card bg-slate-50 border border-slate-200 rounded-3xl p-7 flex flex-col justify-center items-center text-center">
+                    <div class="text-[#C9A227] mb-4"><i class="fa-solid fa-newspaper text-4xl"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">Project Updates Coming Soon</h3>
+                    <p class="text-sm text-slate-600">We will be sharing case studies and installation highlights from recent projects across the UAE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why-us" class="section-padding max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+            <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">THE INFINITY SHIELD DIFFERENCE</div>
+            <h2 class="text-5xl tracking-tighter font-semibold">UK standards.<br>Skilled teams.<br>Transparent delivery.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white border border-slate-200 rounded-3xl p-8">
+                <h4 class="font-semibold text-xl mb-3">20 Years UK Installation Experience</h4>
+                <p class="text-slate-600">Our methods and quality standards are rooted in the proven practices developed by Infinity Fire Prevention over two decades in the United Kingdom.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-8">
+                <h4 class="font-semibold text-xl mb-3">Skilled Technicians &amp; Certified Materials</h4>
+                <p class="text-slate-600">We only employ trained and competent installers and use materials from approved manufacturers to guarantee performance.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-8">
+                <h4 class="font-semibold text-xl mb-3">Digital Compliance Tracking</h4>
+                <p class="text-slate-600">We provide clear, transparent digital records of every installation — giving clients full visibility and peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padding max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="uppercase tracking-[3px] text-[#C9A227] text-xs font-semibold mb-3">LET'S TALK</div>
+                <h2 class="text-5xl tracking-tighter font-semibold">Request a quote</h2>
+                <p class="mt-3 text-slate-600">We typically respond within 4 hours during business days.</p>
+            </div>
+
+            <form id="technical-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1.5">Full Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-5 py-3.5 border border-slate-300 rounded-2xl focus:outline-none focus:border-[#C9A227]">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium mb-1.5">Company / Organisation</label>
+                        <input type="text" id="company" name="company" required class="w-full px-5 py-3.5 border border-slate-300 rounded-2xl focus:outline-none focus:border-[#C9A227]">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1.5">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-5 py-3.5 border border-slate-300 rounded-2xl focus:outline-none focus:border-[#C9A227]">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium mb-1.5">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-5 py-3.5 border border-slate-300 rounded-2xl focus:outline-none focus:border-[#C9A227]">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="service" class="block text-sm font-medium mb-1.5">Service Required</label>
+                    <select id="service" name="service" class="w-full px-5 py-3.5 border border-slate-300 rounded-2xl focus:outline-none focus:border-[#C9A227]">
+                        <option value="">Please select...</option>
+                        <option>Fire Stopping</option>
+                        <option>Cavity Barriers &amp; Compartmentation</option>
+                        <option>Fire Doors Installation &amp; Maintenance</option>
+                        <option>Steel Fire Protection</option>
+                        <option>Full Passive Fire Protection Package</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-1.5">Project Details</label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-5 py-3.5 border border-slate-300 rounded-3xl focus:outline-none focus:border-[#C9A227]" placeholder="Project location, scope, and timeline..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-slate-900 hover:bg-black text-white font-semibold rounded-3xl text-lg transition-all">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 text-sm">
+        <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-10">
+            <div class="flex flex-col md:flex-row justify-between gap-y-10">
+
+                <div class="flex items-center gap-x-5">
+                    <img src="assets/logos/technical-logo-white.png"
+                         alt="Infinity Shield Technical Services LLC"
+                         class="h-14 w-auto flex-shrink-0">
+
+                    <div>
+                        <div class="text-white text-lg font-semibold tracking-tight">Infinity Shield Technical Services LLC</div>
+                        <div class="text-sm text-slate-400 mt-0.5">Part of Infinity Shield Fire Group</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 text-xs">
+                    <div>
+                        <div class="font-medium text-white mb-3 tracking-wider">COMPANY</div>
+                        <div class="space-y-1.5">
+                            <div>About Us</div>
+                            <div>Our Team</div>
+                            <div>UK Standards</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white mb-3 tracking-wider">SERVICES</div>
+                        <div class="space-y-1.5">
+                            <div>Installation</div>
+                            <div>Maintenance</div>
+                            <div>Compliance Tracking</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white mb-3 tracking-wider">CONTACT</div>
+                        <div class="space-y-1.5">
+                            <div>info@infinityshield.ae</div>
+                            <div>+971 XX XXX XXXX</div>
+                            <div>Dubai, United Arab Emirates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-16 pt-8 text-xs flex flex-col md:flex-row justify-between items-center">
+                <div>© 2026 Infinity Shield Technical Services LLC. All rights reserved.</div>
+                <div class="flex gap-x-6">
+                    <div>Privacy</div>
+                    <div>Terms</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 20);
+            });
+        }
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        function initContactForm() {
+            const form = document.getElementById('technical-form');
+            form.addEventListener('submit', function(e) {
+                if (form.getAttribute('action').includes('YOUR_FORM_ID')) {
+                    e.preventDefault();
+                    const successHTML = `
+                        <div class="fixed inset-0 bg-black/70 z-[200] flex items-center justify-center p-6">
+                            <div class="bg-white max-w-md w-full rounded-3xl p-10 text-center">
+                                <div class="mx-auto w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fa-solid fa-check text-5xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-semibold tracking-tight mb-3">Thank you.</h3>
+                                <p class="text-slate-600 mb-8">Your request has been received. We will contact you within 4 hours.</p>
+                                <button onclick="this.closest('.fixed').remove()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-3xl">Return to website</button>
+                            </div>
+                        </div>`;
+                    document.body.insertAdjacentHTML('beforeend', successHTML);
+                    form.reset();
+                }
+            });
+        }
+
+        window.onload = function() {
+            initNavbar();
+            initMobileMenu();
+            initContactForm();
+        }
+    </script>
+</body>
+</html>
