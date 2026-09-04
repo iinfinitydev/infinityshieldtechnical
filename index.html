@@ -28,7 +28,7 @@
   "@type": "ProfessionalService",
   "name": "Infinity Shield Technical Services LLC",
   "url": "https://www.infinityshieldtechnical.ae/",
-  "email": "jay@infinityshieldtechnical.ae",
+  "email": "info@infinityshieldtechnical.ae",
   "telephone": "+971529798756",
   "image": "https://www.infinityshieldtechnical.ae/assets/images/hero-background.webp",
   "logo": "https://www.infinityshieldtechnical.ae/assets/logos/technical-logo.png",
@@ -465,7 +465,11 @@
                 <p class="mt-3 text-slate-600">We typically respond within 4 hours during business days.</p>
             </div>
 
-            <form id="technical-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+            <form id="technical-form" action="https://formsubmit.co/jay@infinityshieldtechnical.ae" method="POST" class="space-y-6">
+                <input type="hidden" name="_subject" value="Infinity Shield Technical — new enquiry">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium mb-1.5">Full Name</label>
@@ -550,7 +554,7 @@
                 <div>
                     <div class="font-medium text-slate-700 mb-3 tracking-wider text-xs">CONTACT</div>
                     <div class="space-y-1.5 text-sm">
-                        <a href="mailto:jay@infinityshieldtechnical.ae" class="hover:text-[#A8A8A8] block">jay@infinityshieldtechnical.ae</a>
+                        <a href="mailto:info@infinityshieldtechnical.ae" class="hover:text-[#A8A8A8] block">info@infinityshieldtechnical.ae</a>
                         <a href="tel:+971529798756" class="hover:text-[#A8A8A8] block">+971529798756</a>
                         <div>Bay Square - 10 - P05-66, Business Bay, Dubai, UAE</div>
                     </div>
@@ -586,22 +590,46 @@
         function initContactForm() {
             const form = document.getElementById('technical-form');
             form.addEventListener('submit', function(e) {
-                if (form.getAttribute('action').includes('YOUR_FORM_ID')) {
-                    e.preventDefault();
-                    const successHTML = `
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const honey = form.querySelector('[name="_honey"]');
+                if (honey && honey.value) return;
+                btn.disabled = true;
+                fetch('https://formsubmit.co/ajax/jay@infinityshieldtechnical.ae', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                })
+                .then(function(res) { return res.json().then(function(body) { return { ok: res.ok, body: body }; }); })
+                .then(function(result) {
+                    const msg = result.ok
+                        ? 'Your request has been emailed to the technical team. We typically respond within 4 hours on a UAE business day.'
+                        : 'The form could not be delivered just then. Please write to info@infinityshieldtechnical.ae.';
+                    const title = result.ok ? 'Thank you.' : 'Send us an email instead.';
+                    document.body.insertAdjacentHTML('beforeend', `
                         <div class="fixed inset-0 bg-black/70 z-[200] flex items-center justify-center p-6">
                             <div class="bg-white max-w-md w-full rounded-3xl p-10 text-center">
                                 <div class="mx-auto w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
                                     <i class="fa-solid fa-check text-5xl"></i>
                                 </div>
-                                <h3 class="text-3xl font-semibold tracking-tight mb-3">Thank you.</h3>
-                                <p class="text-slate-600 mb-8">Your request has been received. We will contact you within 4 hours.</p>
-                                <button onclick="this.closest('.fixed').remove()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-3xl">Return to website</button>
+                                <h3 class="text-3xl font-semibold tracking-tight mb-3">${title}</h3>
+                                <p class="text-slate-600 mb-8">${msg}</p>
+                                <button onclick="this.closest('.fixed').remove()" class="w-full py-4 bg-[#A8A8A8] hover:bg-[#9CA3AF] text-white font-semibold rounded-3xl">Return to website</button>
                             </div>
-                        </div>`;
-                    document.body.insertAdjacentHTML('beforeend', successHTML);
-                    form.reset();
-                }
+                        </div>`);
+                    if (result.ok) form.reset();
+                })
+                .catch(function() {
+                    document.body.insertAdjacentHTML('beforeend', `
+                        <div class="fixed inset-0 bg-black/70 z-[200] flex items-center justify-center p-6">
+                            <div class="bg-white max-w-md w-full rounded-3xl p-10 text-center">
+                                <h3 class="text-3xl font-semibold tracking-tight mb-3">Send us an email instead.</h3>
+                                <p class="text-slate-600 mb-8">Please write to info@infinityshieldtechnical.ae.</p>
+                                <button onclick="this.closest('.fixed').remove()" class="w-full py-4 bg-[#A8A8A8] hover:bg-[#9CA3AF] text-white font-semibold rounded-3xl">Return to website</button>
+                            </div>
+                        </div>`);
+                })
+                .then(function() { btn.disabled = false; });
             });
         }
 
